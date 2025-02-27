@@ -1,3 +1,12 @@
+# Project Overview
+This is an analysis project looking at the NYC Rolling Sales data provided by the NYC government (https://www.nyc.gov/site/finance/property/property-annualized-sales-update.page).
+It used to be CSVs but have shifted to only having PDFs and Excels sometime around 2023-2024.
+
+## Goals
+* A webpage for a dashboard UI
+* Using regression techniques to project future sales trends
+* Find correlation between economic & political events and property sales
+
 # Pre-processing:
 ## by_borough, 2003-2010 Files:
     same format

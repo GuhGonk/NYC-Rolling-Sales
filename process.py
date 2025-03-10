@@ -128,3 +128,35 @@ class byBoro:
                 print(e)
             
         return pl.concat(dfs)
+    
+class cpi:
+    def pd_load_in(path):
+        df = pd.read_excel(path, skiprows=11)
+        return(df)
+    
+    def pl_load_in(path):
+        df = pl.read_excel(source=path, engine="calamine", read_options={"header_row": 11})
+        return(df)
+    
+class interestRate:
+    def HR15_pl(path):
+        df = pl.read_csv(path, skip_rows = 5)
+        cols = ['Time Period','1M', '3M', '6M', '1Y', '2Y', '3Y', '5Y', '7Y', '10Y', '20Y', '30Y']
+        df.columns = cols
+        return(df)
+    
+    def overnight_rates_pl(path):
+        cols = ['Intra Day - Low (%)', 'Intra Day - High (%)', 'Standard Deviation (%)']
+        cols_to_drop = ['30-Day Average SOFR', '90-Day Average SOFR', '180-Day Average SOFR', 'SOFR Index']
+
+        df = pl.read_excel(
+            source=path,
+            schema_overrides={col: pl.Float64 for col in cols},
+            infer_schema_length=None
+        )
+        df = df.drop(pl.col(cols_to_drop))
+        df = df.filter(pl.col("Effective Date") != "")
+        df = df.with_columns(pl.col("Effective Date").str.strptime(pl.Date, format="%m/%d/%Y"))
+
+        return(df)
+

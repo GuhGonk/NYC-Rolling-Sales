@@ -9,7 +9,7 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
 class MatPlot:
-    def makePlot(chart, data, x, y, title: str, xticks, xlabel, xrot, ylabel, leg_on: bool, leg_pos=None, leg_outer=None, leg_labels=None, hue=None, palette=None, ax=None, leg_bbox=None):
+    def makePlot(chart, data, x, y, title: str, xlabel, ylabel, leg_on: bool, marker = None, leg_pos=None, leg_outer=None, leg_labels=None, leg_bbox=None, hue=None, palette=None, xticks=None, xrot=None, ax=None):
         match chart:
             case 'line':
                 graph = sns.lineplot(
@@ -18,7 +18,7 @@ class MatPlot:
                     y=y,
                     hue=hue,
                     palette=palette,
-                    marker='o',
+                    marker=marker,
                     ax=ax
                 )
             case 'bar':
@@ -30,13 +30,18 @@ class MatPlot:
                     palette=palette,
                     ax=ax
                 )
+        
 
         graph.set_title(title)
         graph.set_xlabel(xlabel)
-        graph.set_xticks(xticks)
-        graph.set_xticklabels(labels=xticks, rotation=xrot)
         graph.set_ylabel(ylabel)
         graph.grid(True, alpha=0.3)
+
+        # graph.set_xlim(min(xticks)-0.5, max(xticks)+0.5)
+        
+        if xticks is not None:
+            graph.set_xticks(xticks)
+            graph.set_xticklabels(labels=xticks, rotation=xrot)
 
         if leg_on == True:
             if leg_outer == True:
@@ -56,4 +61,11 @@ class MatPlot:
         return graph
     
 class Plotly:
-    def makeplot()
+    def makesubplot(chart, data, x, y, row, col):
+        match chart:
+            case 'scatter':
+                graph = go.Scatter(
+                    x=data[x],
+                    y=data[y],
+                    mode='lines'
+                )

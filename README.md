@@ -7,6 +7,9 @@ It used to be CSVs but have shifted to only having PDFs and Excels sometime arou
 * Using regression techniques to project future sales trends
 * Find correlation between economic & political events and property sales
 
+Stretch-Goals:
+* Connecting it to an AI-agent so I can automate myself out of a job
+
 # Pre-processing:
 ## by_borough, 2003-2010 Files:
     same format
@@ -60,7 +63,21 @@ It used to be CSVs but have shifted to only having PDFs and Excels sometime arou
     W - Educational Facilities
     Y - Government/City Departments
     Z - Misc. Building Classifications
-    
+
+## FRB_H15
+Units are all Percent:_Per_Year
+
+H15/H15/RIFLGFCM01_N.B, Market yield on U.S. Treasury securities at 1-month constant maturity, quoted on investment basis
+
+## Bureau of Labor Statistics
+
+CES0000000001 - Total Nonfarm Employment Seasonally Adjusted
+LNS12000000 - Civillian Employment Seasonally Adjusted
+LNS14000000 - Unemployment Rate Seasonally Adjusted
+
+CUUR0000SA0 - CPI for All Urban Consuumers (CPI-U) 1982-84=100 (Unadjusted)
+CUUR0000SA0L1E - CPI-U/Less Food and Energy (Unadjusted)
+
 # Setting up the database
 ## terminal:
     initdb -D "__path__"
@@ -81,3 +98,16 @@ It used to be CSVs but have shifted to only having PDFs and Excels sometime arou
         Database: nyc_rolling_sales
         Username: postgres
         Password: __password_you_used__
+
+## Firing up database
+    Sometimes you might need to kill other PostgreSQL databases to get it up in running
+        taskkill /F /IM postgres.exe
+    
+    pg_ctl -D "__path__" start
+
+# Database
+## Tables
+* nyc_rolling_sales
+* overnight_rates
+* treasury_rates
+* 

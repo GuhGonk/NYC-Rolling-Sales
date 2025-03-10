@@ -1,5 +1,6 @@
 **/data/by_borough/*
 **/data/database/*
 **/data/citywide/*
+**/data/fed_data/*
 **/NYCprop_py312_env/*
 **/.env

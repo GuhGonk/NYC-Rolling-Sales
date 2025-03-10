@@ -17,9 +17,9 @@ def start_conn():
     return(connection)
 
 # write_db() really only for initial push
-def write_db(df):
+def write_db(df, table_name):
     df.write_database(
-        table_name='rolling_sales',
+        table_name=table_name,
         connection=os.getenv('uri'),
         if_table_exists='replace'
     )

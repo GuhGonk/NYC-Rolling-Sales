@@ -7,9 +7,6 @@ It used to be CSVs but have shifted to only having PDFs and Excels sometime arou
 * Using regression techniques to project future sales trends
 * Find correlation between economic & political events and property sales
 
-Stretch-Goals:
-* Connecting it to an AI-agent so I can automate myself out of a job
-
 # Pre-processing:
 ## by_borough, 2003-2010 Files:
     same format
@@ -78,6 +75,10 @@ LNS14000000 - Unemployment Rate Seasonally Adjusted
 CUUR0000SA0 - CPI for All Urban Consuumers (CPI-U) 1982-84=100 (Unadjusted)
 CUUR0000SA0L1E - CPI-U/Less Food and Energy (Unadjusted)
 
+## FreddieMac Mortgage Rates
+Primary Mortgage Market Survey - https://www.freddiemac.com/pmms
+
+
 # Setting up the database
 ## terminal:
     initdb -D "__path__"
@@ -109,5 +110,4 @@ CUUR0000SA0L1E - CPI-U/Less Food and Energy (Unadjusted)
 ## Tables
 * nyc_rolling_sales
 * overnight_rates
-* treasury_rates
-* 
+* treasuries

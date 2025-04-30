@@ -1,5 +1,6 @@
 import pandas as pd
 import polars as pl
+import polars.selectors as cs
 import os
 
 class byBoro:
@@ -46,8 +47,8 @@ class byBoro:
             print(f'{file_path} __ LOADED !')
         return pd.concat(dfs, ignore_index=True)
     
-    def pl_load_in():
-        excel_files = [file for file in os.listdir('data/by_borough')]
+    def pl_load_in(path):
+        excel_files = [file for file in os.listdir(path)]
         dfs = []
         
         columns = ['BOROUGH', 'NEIGHBORHOOD', 'BUILDING CLASS CATEGORY',
@@ -143,6 +144,18 @@ class interestRate:
         df = pl.read_csv(path, skip_rows = 5)
         cols = ['Time Period','1M', '3M', '6M', '1Y', '2Y', '3Y', '5Y', '7Y', '10Y', '20Y', '30Y']
         df.columns = cols
+        df = df.with_columns(pl.col("Time Period").str.strptime(pl.Date, format="%Y-%m-%d"))
+        for col in df.columns:
+            if col != "Time Period":
+                df = df.with_columns(
+                    pl.when(pl.col(col) == "ND")
+                    .then(None)
+                    .otherwise(pl.col(col))
+                    .alias(col)
+                )
+                df = df.with_columns(
+                    pl.col(col).cast(pl.Float64)
+                )
         return(df)
     
     def overnight_rates_pl(path):
@@ -159,4 +172,6 @@ class interestRate:
         df = df.with_columns(pl.col("Effective Date").str.strptime(pl.Date, format="%m/%d/%Y"))
 
         return(df)
-
+    
+    def mortgage_rates(path):
+        pass

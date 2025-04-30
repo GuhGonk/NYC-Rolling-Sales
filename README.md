@@ -7,9 +7,6 @@ It used to be CSVs but have shifted to only having PDFs and Excels sometime arou
 * Using regression techniques to project future sales trends
 * Find correlation between economic & political events and property sales
 
-Stretch-Goals:
-* Connecting it to an AI-agent so I can automate myself out of a job
-
 # Pre-processing:
 ## by_borough, 2003-2010 Files:
     same format

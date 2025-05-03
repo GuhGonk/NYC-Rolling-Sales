@@ -173,5 +173,16 @@ class interestRate:
 
         return(df)
     
-    def mortgage_rates(path):
-        pass
+    def mortgage_rates_pl(path):
+        # 'data/economic/interest_rate/freddiemac_mortgages.xlsx'
+        df = pl.read_excel(source = path, engine = "calamine", read_options = {"header_row": 6})
+        cols = ["Week", "US_30yr_FRM", "30yr_fees_points", "US_15yr_FRM", "15yr_fees_points", "US_5/1_ARM", "5/1_ARM_fees_points", "US_5/1_ARM_margin", "30yrFRM_5/1ARM_spread"]
+        df.columns = cols
+        str_cols = [col for col, dtype in zip(df.columns, df.dtypes) if dtype not in [pl.Float64, pl.Date]]
+
+        df = df.with_columns(
+            pl.col(col).replace(" ", None).alias(col).cast(pl.Float64)
+            for col in str_cols
+        )
+        return(df)
+    

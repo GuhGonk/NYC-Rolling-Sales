@@ -5,3 +5,7 @@ data/fed_data/
 data/economic/
 NYCprop_py312_env/
 .env
+database_testing.ini
+database_testing.py
+db_testing_config.py
+data.zip

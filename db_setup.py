@@ -27,4 +27,5 @@ if __name__ == "__main__":
             case "3":
                 FRB_H15 = proc.interestRate.HR15_pl('data/economic/interest_rate/FRB_H15.csv')
                 overnight = proc.interestRate.overnight_rates_pl('data/economic/interest_rate/OvernightRates_NYFed.xlsx')
-                freddiemac = proc.interestRate.mortgage_rates()
+                freddiemac = proc.interestRate.mortgage_rates_pl('data/economic/interest_rate/freddiemac_mortgages.xlsx')
+                

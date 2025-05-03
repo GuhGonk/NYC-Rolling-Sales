@@ -7,7 +7,7 @@ It used to be CSVs but have shifted to only having PDFs and Excels sometime arou
 * Using regression techniques to project future sales trends
 * Find correlation between economic & political events and property sales
 
-# Pre-processing:
+# Pre-processing (process.py):
 ## by_borough, 2003-2010 Files:
     same format
     Need to skip first 3 rows, pd.read_excel('__path__', skiprows=range(0,3))
@@ -25,61 +25,7 @@ It used to be CSVs but have shifted to only having PDFs and Excels sometime arou
        'YEAR BUILT', 'TAX CLASS AT TIME OF SALE',
        'BUILDING CLASS AT TIME OF SALE', 'SALE PRICE', 'SALE DATE']
 
-# Data Notes
-## Borough:
-    1 - Manhattan
-    2 - Bronx
-    3 - Brooklyn 
-    4 - Queens
-    5 - Staten Island
-
-## Building Class Category
-    https://www.nyc.gov/assets/finance/jump/hlpbldgcode.html
-    
-    A - One Family
-    B - Two Family
-    C - Walk Up Apartments
-    D - Elevator Apartments
-    E - Warehouses
-    F - Factories and Industrial Buildings
-    G - Garages
-    H - Hotel
-    I - Hospitals and Health Facilities
-    J - Theatres
-    K - Store Buildings
-    L - Lofts
-    M - Religious Facilities
-    N - Asylums and Homes
-    O - Office Buildings
-    P - Indoor Public Assembly & Cultural Facilities
-    Q - Outerdoor Recreational Facilities
-    R - Condominiums
-    S - Transportation Facilities
-    U - Utility Bureau Properties
-    V - Vacant Land
-    W - Educational Facilities
-    Y - Government/City Departments
-    Z - Misc. Building Classifications
-
-## FRB_H15
-Units are all Percent:_Per_Year
-
-H15/H15/RIFLGFCM01_N.B, Market yield on U.S. Treasury securities at 1-month constant maturity, quoted on investment basis
-
-## Bureau of Labor Statistics
-
-CES0000000001 - Total Nonfarm Employment Seasonally Adjusted
-LNS12000000 - Civillian Employment Seasonally Adjusted
-LNS14000000 - Unemployment Rate Seasonally Adjusted
-
-CUUR0000SA0 - CPI for All Urban Consuumers (CPI-U) 1982-84=100 (Unadjusted)
-CUUR0000SA0L1E - CPI-U/Less Food and Energy (Unadjusted)
-
-## FreddieMac Mortgage Rates
-Primary Mortgage Market Survey - https://www.freddiemac.com/pmms
-
-
-# Setting up the database
+# Setting up the database (db_connect.py, db_setup.py)
 ## terminal:
     initdb -D "__path__"
     pg_ctl -D "__path__" start
@@ -110,9 +56,4 @@ Primary Mortgage Market Survey - https://www.freddiemac.com/pmms
 ## Tables
 * nyc_rolling_sales
 * overnight_rates
-<<<<<<< HEAD
 * treasuries
-=======
-* treasury_rates
-* 
->>>>>>> 39bece76a5a084f7e545fe75a9a0a7c96200f061

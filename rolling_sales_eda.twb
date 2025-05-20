@@ -1,0 +1,1179 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.25.0208.0338                               -->
+<workbook original-version='18.1' source-build='2024.3.4 (20243.25.0208.0338)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='rolling_2003_2023' inline='true' name='federated.166jsr21r7kd5s15tc7121u8h76l' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='combined' name='textscan.1vr2ler0a3cm2j1gy8orn18sjya1'>
+            <connection class='textscan' directory='C:/Coding/Projects/Data Practice/NYC Rolling Sales/data/by_borough' filename='combined.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1vr2ler0a3cm2j1gy8orn18sjya1' name='combined.csv' table='[combined#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='BOROUGH' ordinal='0' />
+            <column datatype='string' name='NEIGHBORHOOD' ordinal='1' />
+            <column datatype='string' name='BUILDING CLASS CATEGORY' ordinal='2' />
+            <column datatype='string' name='TAX CLASS AT PRESENT' ordinal='3' />
+            <column datatype='integer' name='BLOCK' ordinal='4' />
+            <column datatype='integer' name='LOT' ordinal='5' />
+            <column datatype='string' name='EASE-MENT' ordinal='6' />
+            <column datatype='string' name='BUILDING CLASS AT PRESENT' ordinal='7' />
+            <column datatype='string' name='ADDRESS' ordinal='8' />
+            <column datatype='string' name='APARTMENT NUMBER' ordinal='9' />
+            <column datatype='integer' name='ZIP CODE' ordinal='10' />
+            <column datatype='integer' name='RESIDENTIAL UNITS' ordinal='11' />
+            <column datatype='integer' name='COMMERCIAL UNITS' ordinal='12' />
+            <column datatype='integer' name='TOTAL UNITS' ordinal='13' />
+            <column datatype='integer' name='LAND SQUARE FEET' ordinal='14' />
+            <column datatype='integer' name='GROSS SQUARE FEET' ordinal='15' />
+            <column datatype='integer' name='YEAR BUILT' ordinal='16' />
+            <column datatype='integer' name='TAX CLASS AT TIME OF SALE' ordinal='17' />
+            <column datatype='string' name='BUILDING CLASS AT TIME OF SALE' ordinal='18' />
+            <column datatype='integer' name='SALE PRICE' ordinal='19' />
+            <column datatype='date' name='SALE DATE' ordinal='20' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BOROUGH</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BOROUGH]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>BOROUGH</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>NEIGHBORHOOD</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[NEIGHBORHOOD]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>NEIGHBORHOOD</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BUILDING CLASS CATEGORY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BUILDING CLASS CATEGORY]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>BUILDING CLASS CATEGORY</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TAX CLASS AT PRESENT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[TAX CLASS AT PRESENT]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>TAX CLASS AT PRESENT</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BLOCK</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BLOCK]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>BLOCK</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LOT</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[LOT]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>LOT</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>EASE-MENT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[EASE-MENT]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>EASE-MENT</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <approx-count>1</approx-count>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BUILDING CLASS AT PRESENT</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BUILDING CLASS AT PRESENT]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>BUILDING CLASS AT PRESENT</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ADDRESS</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[ADDRESS]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>ADDRESS</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>APARTMENT NUMBER</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[APARTMENT NUMBER]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>APARTMENT NUMBER</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ZIP CODE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[ZIP CODE]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>ZIP CODE</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RESIDENTIAL UNITS</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[RESIDENTIAL UNITS]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>RESIDENTIAL UNITS</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>COMMERCIAL UNITS</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[COMMERCIAL UNITS]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>COMMERCIAL UNITS</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TOTAL UNITS</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TOTAL UNITS]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>TOTAL UNITS</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>LAND SQUARE FEET</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[LAND SQUARE FEET]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>LAND SQUARE FEET</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>GROSS SQUARE FEET</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[GROSS SQUARE FEET]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>GROSS SQUARE FEET</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>YEAR BUILT</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[YEAR BUILT]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>YEAR BUILT</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TAX CLASS AT TIME OF SALE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TAX CLASS AT TIME OF SALE]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>TAX CLASS AT TIME OF SALE</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BUILDING CLASS AT TIME OF SALE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[BUILDING CLASS AT TIME OF SALE]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>BUILDING CLASS AT TIME OF SALE</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SALE PRICE</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[SALE PRICE]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>SALE PRICE</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>SALE DATE</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[SALE DATE]</local-name>
+            <parent-name>[combined.csv]</parent-name>
+            <remote-alias>SALE DATE</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Address' datatype='string' name='[ADDRESS]' role='dimension' type='nominal' />
+      <column caption='Apartment Number' datatype='string' name='[APARTMENT NUMBER]' role='dimension' type='nominal' />
+      <column caption='Block' datatype='integer' name='[BLOCK]' role='measure' type='quantitative' />
+      <column caption='Borough' datatype='integer' name='[BOROUGH]' role='measure' type='quantitative' />
+      <column caption='Building Class At Present' datatype='string' name='[BUILDING CLASS AT PRESENT]' role='dimension' type='nominal' />
+      <column caption='Building Class At Time Of Sale' datatype='string' name='[BUILDING CLASS AT TIME OF SALE]' role='dimension' type='nominal' />
+      <column caption='Building Class Category' datatype='string' name='[BUILDING CLASS CATEGORY]' role='dimension' type='nominal' />
+      <column caption='Commercial Units' datatype='integer' name='[COMMERCIAL UNITS]' role='measure' type='quantitative' />
+      <column caption='Tax Class Change' datatype='boolean' name='[Calculation_1022317126845620225]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='[TAX CLASS AT PRESENT] != [TAX CLASS AT TIME OF SALE]' />
+      </column>
+      <column caption='Ease-Ment' datatype='string' name='[EASE-MENT]' role='dimension' type='nominal' />
+      <column caption='Gross Square Feet' datatype='integer' name='[GROSS SQUARE FEET]' role='measure' type='quantitative' />
+      <column caption='Land Square Feet' datatype='integer' name='[LAND SQUARE FEET]' role='measure' type='quantitative' />
+      <column caption='Neighborhood' datatype='string' name='[NEIGHBORHOOD]' role='dimension' type='nominal' />
+      <column caption='Residential Units' datatype='integer' name='[RESIDENTIAL UNITS]' role='measure' type='quantitative' />
+      <column caption='Sale Date' datatype='date' name='[SALE DATE]' role='dimension' type='ordinal' />
+      <column caption='Sale Price' datatype='integer' name='[SALE PRICE]' role='measure' type='quantitative' />
+      <column caption='Tax Class At Present' datatype='string' name='[TAX CLASS AT PRESENT]' role='dimension' type='nominal' />
+      <column caption='Tax Class At Time Of Sale' datatype='string' datatype-customized='true' name='[TAX CLASS AT TIME OF SALE]' role='dimension' type='nominal' />
+      <column caption='Total Units' datatype='integer' name='[TOTAL UNITS]' role='measure' type='quantitative' />
+      <column caption='Year Built' datatype='integer' name='[YEAR BUILT]' role='dimension' type='quantitative' />
+      <column aggregation='Sum' caption='Zip Code' datatype='integer' default-format='*00000' name='[ZIP CODE]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
+      <column caption='combined.csv' datatype='table' name='[__tableau_internal_object_id__].[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]' role='measure' type='quantitative' />
+      <column-instance column='[TAX CLASS AT PRESENT]' derivation='Count' name='[cnt:TAX CLASS AT PRESENT:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[TAX CLASS AT TIME OF SALE]' derivation='Count' name='[cnt:TAX CLASS AT TIME OF SALE:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/yangt/AppData/Local/Temp/TableauTemp/#TableauTemp_103vnbb06sxiii18x5wmc0lss5m5.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/20/2025 07:54:00 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>BOROUGH</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[BOROUGH]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BOROUGH</remote-alias>
+              <ordinal>0</ordinal>
+              <family>combined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>NEIGHBORHOOD</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[NEIGHBORHOOD]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>NEIGHBORHOOD</remote-alias>
+              <ordinal>1</ordinal>
+              <family>combined.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>333</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BUILDING CLASS CATEGORY</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[BUILDING CLASS CATEGORY]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BUILDING CLASS CATEGORY</remote-alias>
+              <ordinal>2</ordinal>
+              <family>combined.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>112</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TAX CLASS AT PRESENT</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[TAX CLASS AT PRESENT]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TAX CLASS AT PRESENT</remote-alias>
+              <ordinal>3</ordinal>
+              <family>combined.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BLOCK</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[BLOCK]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BLOCK</remote-alias>
+              <ordinal>4</ordinal>
+              <family>combined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>47952</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LOT</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[LOT]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LOT</remote-alias>
+              <ordinal>5</ordinal>
+              <family>combined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6764</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>EASE-MENT</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[EASE-MENT]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>EASE-MENT</remote-alias>
+              <ordinal>6</ordinal>
+              <family>combined.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BUILDING CLASS AT PRESENT</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[BUILDING CLASS AT PRESENT]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BUILDING CLASS AT PRESENT</remote-alias>
+              <ordinal>7</ordinal>
+              <family>combined.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>307</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ADDRESS</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[ADDRESS]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ADDRESS</remote-alias>
+              <ordinal>8</ordinal>
+              <family>combined.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>541259</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>APARTMENT NUMBER</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[APARTMENT NUMBER]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>APARTMENT NUMBER</remote-alias>
+              <ordinal>9</ordinal>
+              <family>combined.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>16820</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ZIP CODE</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[ZIP CODE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ZIP CODE</remote-alias>
+              <ordinal>10</ordinal>
+              <family>combined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>208</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>RESIDENTIAL UNITS</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[RESIDENTIAL UNITS]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>RESIDENTIAL UNITS</remote-alias>
+              <ordinal>11</ordinal>
+              <family>combined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>442</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>COMMERCIAL UNITS</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[COMMERCIAL UNITS]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>COMMERCIAL UNITS</remote-alias>
+              <ordinal>12</ordinal>
+              <family>combined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>158</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TOTAL UNITS</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[TOTAL UNITS]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TOTAL UNITS</remote-alias>
+              <ordinal>13</ordinal>
+              <family>combined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>372</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>LAND SQUARE FEET</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[LAND SQUARE FEET]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>LAND SQUARE FEET</remote-alias>
+              <ordinal>14</ordinal>
+              <family>combined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24044</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>GROSS SQUARE FEET</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[GROSS SQUARE FEET]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>GROSS SQUARE FEET</remote-alias>
+              <ordinal>15</ordinal>
+              <family>combined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>20160</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>YEAR BUILT</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[YEAR BUILT]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>YEAR BUILT</remote-alias>
+              <ordinal>16</ordinal>
+              <family>combined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>230</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>TAX CLASS AT TIME OF SALE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[TAX CLASS AT TIME OF SALE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>TAX CLASS AT TIME OF SALE</remote-alias>
+              <ordinal>17</ordinal>
+              <family>combined.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='binary' />
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>BUILDING CLASS AT TIME OF SALE</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[BUILDING CLASS AT TIME OF SALE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>BUILDING CLASS AT TIME OF SALE</remote-alias>
+              <ordinal>18</ordinal>
+              <family>combined.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>291</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SALE PRICE</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[SALE PRICE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SALE PRICE</remote-alias>
+              <ordinal>19</ordinal>
+              <family>combined.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>33016</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>SALE DATE</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[SALE DATE]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>SALE DATE</remote-alias>
+              <ordinal>20</ordinal>
+              <family>combined.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>26382</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[combined.csv_8A63561ABC644CDDBC9601DB9AD378AD]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.166jsr21r7kd5s15tc7121u8h76l].[cnt:TAX CLASS AT PRESENT:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.166jsr21r7kd5s15tc7121u8h76l].[ctd:TAX CLASS AT PRESENT:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.166jsr21r7kd5s15tc7121u8h76l]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.166jsr21r7kd5s15tc7121u8h76l].[cnt:TAX CLASS AT TIME OF SALE:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='combined.csv' id='combined.csv_8A63561ABC644CDDBC9601DB9AD378AD'>
+            <properties context=''>
+              <relation connection='textscan.1vr2ler0a3cm2j1gy8orn18sjya1' name='combined.csv' table='[combined#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='BOROUGH' ordinal='0' />
+                  <column datatype='string' name='NEIGHBORHOOD' ordinal='1' />
+                  <column datatype='string' name='BUILDING CLASS CATEGORY' ordinal='2' />
+                  <column datatype='string' name='TAX CLASS AT PRESENT' ordinal='3' />
+                  <column datatype='integer' name='BLOCK' ordinal='4' />
+                  <column datatype='integer' name='LOT' ordinal='5' />
+                  <column datatype='string' name='EASE-MENT' ordinal='6' />
+                  <column datatype='string' name='BUILDING CLASS AT PRESENT' ordinal='7' />
+                  <column datatype='string' name='ADDRESS' ordinal='8' />
+                  <column datatype='string' name='APARTMENT NUMBER' ordinal='9' />
+                  <column datatype='integer' name='ZIP CODE' ordinal='10' />
+                  <column datatype='integer' name='RESIDENTIAL UNITS' ordinal='11' />
+                  <column datatype='integer' name='COMMERCIAL UNITS' ordinal='12' />
+                  <column datatype='integer' name='TOTAL UNITS' ordinal='13' />
+                  <column datatype='integer' name='LAND SQUARE FEET' ordinal='14' />
+                  <column datatype='integer' name='GROSS SQUARE FEET' ordinal='15' />
+                  <column datatype='integer' name='YEAR BUILT' ordinal='16' />
+                  <column datatype='integer' name='TAX CLASS AT TIME OF SALE' ordinal='17' />
+                  <column datatype='string' name='BUILDING CLASS AT TIME OF SALE' ordinal='18' />
+                  <column datatype='integer' name='SALE PRICE' ordinal='19' />
+                  <column datatype='date' name='SALE DATE' ordinal='20' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Change in Tax Class Count (Present) by Year'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='rolling_2003_2023' name='federated.166jsr21r7kd5s15tc7121u8h76l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.166jsr21r7kd5s15tc7121u8h76l'>
+            <column caption='Tax Class Change' datatype='boolean' name='[Calculation_1022317126845620225]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[TAX CLASS AT PRESENT] != [TAX CLASS AT TIME OF SALE]' />
+            </column>
+            <column caption='Sale Date' datatype='date' name='[SALE DATE]' role='dimension' type='ordinal' />
+            <column caption='Tax Class At Present' datatype='string' name='[TAX CLASS AT PRESENT]' role='dimension' type='nominal' />
+            <column caption='Tax Class At Time Of Sale' datatype='string' datatype-customized='true' name='[TAX CLASS AT TIME OF SALE]' role='dimension' type='nominal' />
+            <column-instance column='[TAX CLASS AT PRESENT]' derivation='Count' name='[cnt:TAX CLASS AT PRESENT:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1022317126845620225]' derivation='None' name='[none:Calculation_1022317126845620225:nk]' pivot='key' type='nominal' />
+            <column-instance column='[TAX CLASS AT PRESENT]' derivation='None' name='[none:TAX CLASS AT PRESENT:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SALE DATE]' derivation='Year-Trunc' name='[tyr:SALE DATE:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.166jsr21r7kd5s15tc7121u8h76l].[none:Calculation_1022317126845620225:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1022317126845620225:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.166jsr21r7kd5s15tc7121u8h76l].[none:TAX CLASS AT PRESENT:nk]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:TAX CLASS AT PRESENT:nk]' member='&quot;1&quot;' />
+              <groupfilter function='member' level='[none:TAX CLASS AT PRESENT:nk]' member='&quot;1A&quot;' />
+              <groupfilter function='member' level='[none:TAX CLASS AT PRESENT:nk]' member='&quot;1B&quot;' />
+              <groupfilter function='member' level='[none:TAX CLASS AT PRESENT:nk]' member='&quot;1C&quot;' />
+              <groupfilter function='member' level='[none:TAX CLASS AT PRESENT:nk]' member='&quot;1D&quot;' />
+              <groupfilter function='member' level='[none:TAX CLASS AT PRESENT:nk]' member='&quot;2&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.166jsr21r7kd5s15tc7121u8h76l].[none:Calculation_1022317126845620225:nk]</column>
+            <column>[federated.166jsr21r7kd5s15tc7121u8h76l].[none:TAX CLASS AT PRESENT:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.166jsr21r7kd5s15tc7121u8h76l].[none:TAX CLASS AT PRESENT:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.166jsr21r7kd5s15tc7121u8h76l].[cnt:TAX CLASS AT PRESENT:qk]</rows>
+        <cols>[federated.166jsr21r7kd5s15tc7121u8h76l].[tyr:SALE DATE:ok]</cols>
+      </table>
+      <simple-id uuid='{E3B9E5F9-B858-4D33-84AA-EF367097A4FF}' />
+    </worksheet>
+    <worksheet name='Change in Tax Class Count (Present) by Year (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='rolling_2003_2023' name='federated.166jsr21r7kd5s15tc7121u8h76l' />
+          </datasources>
+          <datasource-dependencies datasource='federated.166jsr21r7kd5s15tc7121u8h76l'>
+            <column caption='Tax Class Change' datatype='boolean' name='[Calculation_1022317126845620225]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='[TAX CLASS AT PRESENT] != [TAX CLASS AT TIME OF SALE]' />
+            </column>
+            <column caption='Sale Date' datatype='date' name='[SALE DATE]' role='dimension' type='ordinal' />
+            <column caption='Tax Class At Present' datatype='string' name='[TAX CLASS AT PRESENT]' role='dimension' type='nominal' />
+            <column caption='Tax Class At Time Of Sale' datatype='string' datatype-customized='true' name='[TAX CLASS AT TIME OF SALE]' role='dimension' type='nominal' />
+            <column-instance column='[TAX CLASS AT TIME OF SALE]' derivation='Count' name='[cnt:TAX CLASS AT TIME OF SALE:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1022317126845620225]' derivation='None' name='[none:Calculation_1022317126845620225:nk]' pivot='key' type='nominal' />
+            <column-instance column='[TAX CLASS AT TIME OF SALE]' derivation='None' name='[none:TAX CLASS AT TIME OF SALE:nk]' pivot='key' type='nominal' />
+            <column-instance column='[SALE DATE]' derivation='Year-Trunc' name='[tyr:SALE DATE:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.166jsr21r7kd5s15tc7121u8h76l].[none:Calculation_1022317126845620225:nk]'>
+            <groupfilter function='member' level='[none:Calculation_1022317126845620225:nk]' member='true' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.166jsr21r7kd5s15tc7121u8h76l].[none:TAX CLASS AT TIME OF SALE:nk]'>
+            <groupfilter function='level-members' level='[none:TAX CLASS AT TIME OF SALE:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.166jsr21r7kd5s15tc7121u8h76l].[none:Calculation_1022317126845620225:nk]</column>
+            <column>[federated.166jsr21r7kd5s15tc7121u8h76l].[none:TAX CLASS AT TIME OF SALE:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.166jsr21r7kd5s15tc7121u8h76l].[none:TAX CLASS AT TIME OF SALE:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.166jsr21r7kd5s15tc7121u8h76l].[cnt:TAX CLASS AT TIME OF SALE:qk]</rows>
+        <cols>[federated.166jsr21r7kd5s15tc7121u8h76l].[tyr:SALE DATE:ok]</cols>
+      </table>
+      <simple-id uuid='{F8A3161B-8963-44B8-A92E-0707ABF900CA}' />
+    </worksheet>
+    <worksheet name='Sheet 2'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5FD3D4F2-4B56-4BCA-90C3-94847CFE13D4}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Change in Tax Class Count (Present) by Year'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.166jsr21r7kd5s15tc7121u8h76l].[none:TAX CLASS AT PRESENT:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.166jsr21r7kd5s15tc7121u8h76l].[none:TAX CLASS AT PRESENT:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.166jsr21r7kd5s15tc7121u8h76l].[:Measure Names]</field>
+            <field>[federated.166jsr21r7kd5s15tc7121u8h76l].[cnt:TAX CLASS AT PRESENT:qk]</field>
+            <field>[federated.166jsr21r7kd5s15tc7121u8h76l].[none:Calculation_1022317126845620225:nk]</field>
+            <field>[federated.166jsr21r7kd5s15tc7121u8h76l].[none:TAX CLASS AT PRESENT:nk]</field>
+            <field>[federated.166jsr21r7kd5s15tc7121u8h76l].[none:TAX CLASS AT TIME OF SALE:nk]</field>
+            <field>[federated.166jsr21r7kd5s15tc7121u8h76l].[tyr:SALE DATE:ok]</field>
+            <field>[federated.166jsr21r7kd5s15tc7121u8h76l].[yr:SALE DATE:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{2D012418-AA5E-42EE-9A75-C15C88877DB4}' />
+    </window>
+    <window class='worksheet' name='Change in Tax Class Count (Present) by Year (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.166jsr21r7kd5s15tc7121u8h76l].[none:TAX CLASS AT TIME OF SALE:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.166jsr21r7kd5s15tc7121u8h76l].[none:TAX CLASS AT TIME OF SALE:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.166jsr21r7kd5s15tc7121u8h76l].[:Measure Names]</field>
+            <field>[federated.166jsr21r7kd5s15tc7121u8h76l].[cnt:TAX CLASS AT PRESENT:qk]</field>
+            <field>[federated.166jsr21r7kd5s15tc7121u8h76l].[none:Calculation_1022317126845620225:nk]</field>
+            <field>[federated.166jsr21r7kd5s15tc7121u8h76l].[none:TAX CLASS AT PRESENT:nk]</field>
+            <field>[federated.166jsr21r7kd5s15tc7121u8h76l].[none:TAX CLASS AT TIME OF SALE:nk]</field>
+            <field>[federated.166jsr21r7kd5s15tc7121u8h76l].[tyr:SALE DATE:ok]</field>
+            <field>[federated.166jsr21r7kd5s15tc7121u8h76l].[yr:SALE DATE:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{811B9D1C-FC51-492E-BF6E-F866C974EC03}' />
+    </window>
+    <window class='worksheet' name='Sheet 2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{22913ABA-2000-4F5F-834A-27C67A3E13F1}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Change in Tax Class Count (Present) by Year' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Change in Tax Class Count (Present) by Year (2)' width='192'>
+      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
+      dMO0bUpgdwAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 2' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAACFUlEQVR4nO3TMQEAIAzAMMC/5yFjRxMFfXpnZg5Eve0A2GQA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQD
+      kGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBp
+      BiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA
+      0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDN
+      AKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxA
+      mgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZ
+      gDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFI
+      MwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKQZgDQDkGYA0gxAmgFIMwBpBiDNAKR9Y+0F
+      fBUOM1sAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

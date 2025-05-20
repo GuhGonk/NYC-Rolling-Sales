@@ -20,16 +20,19 @@ class byBoro:
         for f in excel_files:
             file_path = os.path.join('data/by_borough', f)
             
-            if any(num in str(file_path) for num in ['03','04','05','06','07','08','09','10']):
-                df = pd.read_excel(file_path, skiprows=range(0,3))
-            elif '11' in str(file_path):
-                df = pd.read_excel(file_path, skiprows=range(0,4))
-            elif any(num in str(file_path) for num in ['12','13','14','15','16','17','18','19']):
-                df = pd.read_excel(file_path, skiprows=range(0,4))
-                df.columns = columns
-            elif any(num in str(file_path) for num in ['20','21', '22', '23']):
-                df = pd.read_excel(file_path, skiprows=range(0,6))
-                df.columns = columns
+            if "combined" not in str(file_path):
+                if any(num in str(file_path) for num in ['03','04','05','06','07','08','09','10']):
+                    df = pd.read_excel(file_path, skiprows=range(0,3))
+                elif '11' in str(file_path):
+                    df = pd.read_excel(file_path, skiprows=range(0,4))
+                elif any(num in str(file_path) for num in ['12','13','14','15','16','17','18','19']):
+                    df = pd.read_excel(file_path, skiprows=range(0,4))
+                    df.columns = columns
+                elif any(num in str(file_path) for num in ['20','21', '22', '23']):
+                    df = pd.read_excel(file_path, skiprows=range(0,6))
+                    df.columns = columns
+            else:
+                pass
 
             mask = (
                 df['BOROUGH'].notna() & 
@@ -65,14 +68,17 @@ class byBoro:
             try:
                 file_path = os.path.join('data/by_borough', f)
                 
-                if any(num in str(file_path) for num in ['03','04','05','06','07','08','09','10']):
-                    df = pl.read_excel(source = file_path, engine = "calamine", read_options = {"header_row": 3})
-                elif '11' in str(file_path):
-                    df = pl.read_excel(source = file_path, engine = "calamine", read_options = {"header_row": 4})
-                elif any(num in str(file_path) for num in ['12','13','14','15','16','17','18','19']):
-                    df = pl.read_excel(source = file_path, engine = "calamine", read_options = {"header_row": 4})
-                elif any(num in str(file_path) for num in ['20','21', '22', '23']):
-                    df = pl.read_excel(source = file_path, engine = "calamine", read_options = {"header_row": 6})
+                if "combined" not in str(file_path):
+                    if any(num in str(file_path) for num in ['03','04','05','06','07','08','09','10']):
+                        df = pl.read_excel(source = file_path, engine = "calamine", read_options = {"header_row": 3})
+                    elif '11' in str(file_path):
+                        df = pl.read_excel(source = file_path, engine = "calamine", read_options = {"header_row": 4})
+                    elif any(num in str(file_path) for num in ['12','13','14','15','16','17','18','19']):
+                        df = pl.read_excel(source = file_path, engine = "calamine", read_options = {"header_row": 4})
+                    elif any(num in str(file_path) for num in ['20','21', '22', '23']):
+                        df = pl.read_excel(source = file_path, engine = "calamine", read_options = {"header_row": 6})
+                else:
+                    pass
                 
                 # Rename the columns
                 df.columns = columns
@@ -96,16 +102,18 @@ class byBoro:
                     'LAND SQUARE FEET': pl.Int64,
                     'GROSS SQUARE FEET': pl.Int64,
                     'YEAR BUILT': pl.Int64,
-                    'TAX CLASS AT TIME OF SALE': pl.Int64,
+                    'TAX CLASS AT TIME OF SALE': pl.Utf8,
                     'BUILDING CLASS AT TIME OF SALE': pl.Utf8,
                     'SALE PRICE': pl.Int64,
                     'SALE DATE': pl.Date
                 }
-
+                
+                # casting data types
                 df = df.with_columns([
                     pl.col(col_name).cast(dtype, strict=False) for col_name, dtype in schema.items()
                 ])
 
+                # rename
                 df = df.with_columns([
                     pl.col(col_name).str.strip_chars() 
                     for col_name, dtype in schema.items() 
@@ -120,6 +128,11 @@ class byBoro:
                     (pl.col('LOT').is_not_null())
                 )
                 
+                # Extract main tax class from the present
+                df = df.with_columns(
+                    pl.col("TAX CLASS AT PRESENT").str.extract(r"(\d+)").alias("mainTaxClass_present")
+                )
+
                 dfs.append(df)
                 counter += 1
                 if counter % 10 == 0 :

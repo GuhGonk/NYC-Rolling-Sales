@@ -199,3 +199,11 @@ class interestRate:
         )
         return(df)
     
+class labor:
+    def labor_pl(path,num_skip_rows):
+        df = pl.read_excel(
+            source=path,
+            engine="calamine",
+            read_options={"header_row": num_skip_rows}
+        )
+        return(df)

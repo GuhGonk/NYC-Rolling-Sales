@@ -4,7 +4,10 @@ connection = db_connect.start_conn()
 
 if __name__ == "__main__":
     while True:
-        print("""__Menu__\n
+        print("""
+               ------
+              | Menu |
+               ------\n
             1) NYC Rolling Sales
             2) CPI
             3) Interest Rate
@@ -29,12 +32,16 @@ if __name__ == "__main__":
                 FRB_H15 = proc.interestRate.HR15_pl('data/economic/interest_rate/FRB_H15.csv')
                 overnight = proc.interestRate.overnight_rates_pl('data/economic/interest_rate/OvernightRates_NYFed.xlsx')
                 freddiemac = proc.interestRate.mortgage_rates_pl('data/economic/interest_rate/freddiemac_mortgages.xlsx')
+                db_connect.write_db(FRB_H15, 'FRB_H15')
+                db_connect.write_db(overnight, 'overnight_rates')
+                db_connect.write_db(freddiemac, 'freddiemac')
+                print("Interest Rate data uploaded to database\n")
             case "4":
                 print("Consumer Metrics in progress")
             case "5":
                 nonfarmSA = proc.labor.labor_pl('data/economic/labour/CES0000000001_2002-2024.xlsx', 12)
                 civ_empSA = proc.labor.labor_pl('data/economic/labour/LNS12000000_2002_2024.xlsx', 11)
-                unempSA = proc.labor.labor_pl('data/economic/labour/LNS14000000_2002_2024.xlsx', 11)
+                unempSA = proc.labor.labor_pl('data/economic/labour/LNS14000000_2002-2024.xlsx', 11)
                 db_connect.write_db(nonfarmSA, 'nonfarmSA')
                 db_connect.write_db(civ_empSA, 'civ_empSA')
                 db_connect.write_db(unempSA, 'unempSA')
